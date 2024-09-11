@@ -1,38 +1,116 @@
-.App {
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background & Container */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.container {
+  background: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 900px;
   text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container:hover {
+  transform: translateY(-10px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Form & Button Styling */
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+label {
+  margin: 10px 0 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+input, textarea {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+input:focus, textarea:focus {
+  border-color: #007BFF;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+}
+
+button {
+  padding: 12px;
+  background-color: #007BFF;
   color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Tasks Section */
+.tasks-section-container {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Download Button */
+.download-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .form-tasks-container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .form-section, .tasks-section-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  button {
+    font-size: 0.9rem;
   }
 }

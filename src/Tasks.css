@@ -1,0 +1,110 @@
+/* Tasks.css */
+.tasks-container {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 500px; /* Fixed height for scrollable area */
+    overflow-y: auto;  /* Enables vertical scrolling */
+  }
+  
+  .tasks-container h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.5em; /* Adjust as needed */
+  }
+  
+  .task-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    transition: transform 0.2s ease;
+    font-size: 0.9em; /* Decrease text size here */
+  }
+  
+  .task-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-item p {
+    margin: 5px 0;
+    font-size: 0.85em; /* Decrease text size here */
+  }
+  
+  .task-title {
+    display: inline-block;
+    position: relative;
+    font-size: 1em; /* Decrease text size here */
+  }
+  
+  .tooltip-container {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;  /* Position the tooltip above the text */
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 200px;
+    transition: opacity 0.3s ease-in-out;
+    white-space: normal;
+    font-size: 0.9em; /* Decrease text size here */
+  }
+  
+  .tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;  /* Arrow at the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+  }
+  
+  .task-item strong {
+    color: #007bff;
+    font-size: 1em; /* Decrease text size here */
+  }
+  
+  .download-button {
+    position: fixed;
+    bottom: 20px; /* Adjust space from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
