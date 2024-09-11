@@ -17,7 +17,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:3000/generate', {
+      const response = await fetch('https://gemini-api-backend.onrender.com/generate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ function App() {
 
   const handleDownloadICS = async () => {
     try {
-      const response = await fetch('http://localhost:3000/download-ics', {
+      const response = await fetch('https://gemini-api-backend.onrender.com/download-ics', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
